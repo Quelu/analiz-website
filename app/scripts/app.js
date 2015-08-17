@@ -22,12 +22,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   });
 
   window.addEventListener( 'WebComponentsReady', function() {
-    setHeight();
   });
 
-  window.addEventListener('resize', function() {
-    setHeight();
-  });
 
   app.goTo = function ( anchor ) {
     var target = anchor.target;
@@ -50,15 +46,5 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
   };
 
-  var setHeight = function () {
-    var paperToolbar = document.querySelector( 'paper-toolbar' );
-    var sections = document.querySelectorAll( '.page-section' );
-
-    for (var section in sections) {
-      if (sections.hasOwnProperty(section)) {
-        sections[section].style.setProperty( 'height', (window.innerHeight - paperToolbar.offsetHeight) + 'px' );
-      }
-    }
-  };
 
 })(document);
