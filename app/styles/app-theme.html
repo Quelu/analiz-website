@@ -46,21 +46,31 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     @apply(--layout-vertical);
   }
 
+  iron-image {
+    width: 100%;
+  }
+
 
   .title-container {
-    width: 50%;
-    text-align: center;
     margin: 0 auto;
     @apply(--layout-vertical);
     @apply(--layout-center-center);
+  }
+
+  .title-container--center {
+    text-align: center;
   }
 
   .title-container h1 {
     @apply(--paper-font-display1);
   }
 
-  .title-container p {
+  .title-container h2 {
     @apply(--paper-font-title);
+  }
+
+  .title-container p {
+    @apply(--paper-font-body1);
   }
 
   .title-container--white {
@@ -77,6 +87,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     background-color: rgba(255, 255, 255, 0.3);
   }
 
+  .divider--dark {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
   #header {
     background-color: var(--default-primary-color);
     min-height: 300px;
@@ -90,19 +104,38 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     background: url('../images/header.png') no-repeat center center;
     background-size: contain;
     margin: 2em auto;
+    height: 300px;
   }
+
+  .row {
+    max-width: 960px;
+    margin: 60px auto;
+  }
+
+  .about {
+    box-sizing: border-box;
+    padding: 0 15px;
+  }
+
+  .img {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .img--01 { background-image: url(../images/interface-01.png) }
+  .img--02 { background-image: url(../images/interface-02.png) }
+  .img--03 { background-image: url(../images/interface-03.png) }
+  .img--04 { background-image: url(../images/interface-04.png) }
+  .img--05 { background-image: url(../images/interface-05.png) }
+  .img--06 { background-image: url(../images/interface-06.png) }
 
   /* Breakpoints */
 
   /* Small */
-  @media (max-width: 600px) {
-
+  @media (max-width: 568px) {
     #header {
       padding: 0;
-    }
-
-    #header .screen {
-      height: 300px;
     }
 
     paper-toolbar .title {
@@ -128,10 +161,22 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       min-width: 360px;
     }
 
+    .img {
+      height: 275px
+    }
+
+    .row {
+      margin: 120px auto;
+    }
+
   }
 
   /* Tablet+ */
-  @media (min-width: 601px) {
+  @media (min-width: 568px) {
+    .row {
+      margin: 120px auto;
+    }
+
     #header .screen {
       height: 600px;
     }
@@ -151,6 +196,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       padding: 48px 62px;
     }
 
+    .img {
+      height: 360px
+    }
+  }
+
+  /*
+  * Retina Media Queries
+  */
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   }
 
   /* Material Design Adaptive Breakpoints */

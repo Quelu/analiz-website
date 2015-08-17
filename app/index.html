@@ -44,6 +44,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   <!-- build:css styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.6.0/base-min.css&pure/0.6.0/grids-min.css&pure/0.6.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.6.0/base-min.css&pure/0.6.0/grids-min.css&pure/0.6.0/grids-responsive-min.css">
+  <!--<![endif]-->
   <!-- endbuild-->
 
   <!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
@@ -71,19 +77,45 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       </paper-toolbar>
       <div id="paper-header-content" class="content">
         <section class="page-section" id="header">
-          <div class="title-container title-container--white">
+          <div class="title-container title-container--center title-container--white">
             <h1>Analiz</h1>
             <div class="divider divider--white"></div>
-            <p>
+            <h2>
               Application d'audit de code
-            </p>
+            </h2>
             <paper-button raised data-scroll="about" on-click="goTo">En savoir plus</paper-button>
           </div>
           <div class="screen"></div>
         </section>
         <section class="page-section" id="about">
-          <div class="title-container">
-            <h1>A propos</h1>
+          <div class="pure-g row">
+            <div class="pure-u-1-1 pure-u-md-3-4 about img img--01">
+            </div>
+            <div class="pure-u-1-1 pure-u-md-3-4 about">
+              <div class="title-container">
+                <h1>Une interface claire</h1>
+                <div class="divider divider--dark"></div>
+                <p>
+                  ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="pure-g row">
+            <div class="pure-u-md-1-4"></div>
+            <div class="pure-u-1-1 pure-u-md-3-4 about img img--02">
+              <iron-image src="./images/interface-02.png" preload sizing="contain"></iron-image>
+            </div>
+            <div class="pure-u-md-1-4"></div>
+            <div class="pure-u-1-1 pure-u-md-3-4 about">
+              <div class="title-container">
+                <h1>Personnaliser votre analyse</h1>
+                <div class="divider divider--dark"></div>
+                <p>
+                  ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                </p>
+              </div>
+            </div>
           </div>
         </section>
       </div>
